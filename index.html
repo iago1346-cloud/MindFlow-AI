@@ -33,6 +33,7 @@
 
         <ul class="nav-menu" id="primary-menu" data-menu>
           <li><a href="#inicio">Início</a></li>
+          <li><a href="#interface">Interface</a></li>
           <li><a href="#recursos">Recursos</a></li>
           <li><a href="#enem">ENEM</a></li>
           <li><a href="#contato">Contato</a></li>
@@ -97,6 +98,96 @@
         </div>
       </section>
 
+      <section class="section interface-system" id="interface" aria-labelledby="interface-title">
+        <div class="section__heading">
+          <p class="eyebrow">Sistema de interface</p>
+          <h2 id="interface-title">Componentes visuais para manter a plataforma consistente</h2>
+          <p class="section__lead">
+            A Fase 2 define a identidade visual do MindFlow AI com cores, tipografia, botões, cards, inputs, modal, ícones e padrões responsivos reutilizáveis.
+          </p>
+        </div>
+
+        <div class="ui-showcase">
+          <article class="ui-panel">
+            <div class="ui-panel__header">
+              <span class="ui-icon ui-icon--palette" aria-hidden="true"></span>
+              <div>
+                <h3>Cores</h3>
+                <p>Paleta base para a identidade visual.</p>
+              </div>
+            </div>
+            <div class="swatch-grid" aria-label="Paleta de cores">
+              <span class="swatch swatch--primary">Primária</span>
+              <span class="swatch swatch--accent">Apoio</span>
+              <span class="swatch swatch--warm">Destaque</span>
+              <span class="swatch swatch--neutral">Neutra</span>
+            </div>
+          </article>
+
+          <article class="ui-panel">
+            <div class="ui-panel__header">
+              <span class="ui-icon ui-icon--type" aria-hidden="true"></span>
+              <div>
+                <h3>Tipografia</h3>
+                <p>Escala de texto legível para dashboards e formulários.</p>
+              </div>
+            </div>
+            <div class="type-sample">
+              <strong>Título de seção</strong>
+              <span>Texto de apoio com leitura confortável.</span>
+              <small>Legenda e metadados</small>
+            </div>
+          </article>
+
+          <article class="ui-panel">
+            <div class="ui-panel__header">
+              <span class="ui-icon ui-icon--cards" aria-hidden="true"></span>
+              <div>
+                <h3>Cards</h3>
+                <p>Blocos reutilizáveis para metas, resumos e tarefas.</p>
+              </div>
+            </div>
+            <div class="metric-card">
+              <span>Sequência de estudos</span>
+              <strong>12 dias</strong>
+              <p>Meta diária concluída</p>
+            </div>
+          </article>
+
+          <article class="ui-panel ui-panel--wide">
+            <div class="ui-panel__header">
+              <span class="ui-icon ui-icon--form" aria-hidden="true"></span>
+              <div>
+                <h3>Inputs e botões</h3>
+                <p>Controles preparados para cadastro, login e contato.</p>
+              </div>
+            </div>
+            <form class="sample-form">
+              <label class="field">
+                <span>Nome</span>
+                <input type="text" placeholder="Digite seu nome" />
+              </label>
+              <label class="field">
+                <span>Objetivo</span>
+                <select>
+                  <option>Preparar para o ENEM</option>
+                  <option>Organizar rotina escolar</option>
+                  <option>Melhorar desempenho</option>
+                </select>
+              </label>
+              <label class="field field--full">
+                <span>Mensagem</span>
+                <textarea rows="3" placeholder="Conte qual é sua meta de estudo"></textarea>
+              </label>
+              <div class="sample-form__actions">
+                <button class="button button--primary" type="button">Salvar preferências</button>
+                <button class="button button--ghost" type="button" data-modal-open>Abrir modal</button>
+              </div>
+            </form>
+          </article>
+        </div>
+      </section>
+
       <section class="section features" id="recursos" aria-labelledby="features-title">
         <div class="section__heading">
           <p class="eyebrow">Base inicial</p>
@@ -142,10 +233,24 @@
 
       <nav class="footer-links" aria-label="Links do rodapé">
         <a href="#inicio">Início</a>
+        <a href="#interface">Interface</a>
         <a href="#recursos">Recursos</a>
         <a href="#enem">ENEM</a>
       </nav>
     </footer>
+
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden data-modal>
+      <div class="modal__backdrop" data-modal-close></div>
+      <div class="modal__content">
+        <button class="modal__close" type="button" aria-label="Fechar modal" data-modal-close>&times;</button>
+        <span class="ui-icon ui-icon--modal" aria-hidden="true"></span>
+        <h2 id="modal-title">Componente de modal</h2>
+        <p>
+          Este padrão será reutilizado em confirmações, mensagens de suporte, login e recuperação de senha nas próximas fases.
+        </p>
+        <button class="button button--primary" type="button" data-modal-close>Entendi</button>
+      </div>
+    </div>
 
     <script src="main.js"></script>
   </body>
