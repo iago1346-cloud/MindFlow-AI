@@ -4,8 +4,8 @@ Plataforma web estática para organização de estudos com recursos inspirados e
 
 ## Estrutura inicial
 
-- `index.html`: página inicial com navbar, hero, seções-base e footer.
-- `styles/style.css`: estilos globais, layout responsivo, design system e componentes de UI.
+- `index.html`: landing page com navbar, hero, benefícios, funcionamento, recursos, bloco ENEM, chamada de cadastro, design system e footer.
+- `styles/style.css`: estilos globais, layout responsivo, design system, landing page e componentes de UI.
 - `main.js`: interação do menu responsivo, estado visual do header e modal.
 - `docs/`: documentação do projeto, PRD e plano de implantação.
 
@@ -13,6 +13,7 @@ Plataforma web estática para organização de estudos com recursos inspirados e
 
 - Fase 1: estrutura HTML, CSS, JavaScript, navbar, footer e página inicial.
 - Fase 2: sistema de interface com cores, tipografia, botões, cards, inputs, modal, menu responsivo, ícones e componentes reutilizáveis.
+- Fase 3: landing page com hero section, benefícios, como funciona, recursos principais, preparatório ENEM, chamada para cadastro e rodapé completo.
 
 ## Como abrir
 
