@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cadastro do estudante no MindFlow AI." />
+    <title>Cadastro | MindFlow AI</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <nav class="navbar" aria-label="Navegação principal">
+        <a class="brand" href="../index.html" aria-label="MindFlow AI - página inicial">
+          <span class="brand__mark">M</span>
+          <span class="brand__text">MindFlow AI</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-menu" data-menu-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-menu" id="primary-menu" data-menu>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="auth-page">
+      <section class="auth-layout section">
+        <div class="auth-copy">
+          <p class="eyebrow">Área do estudante</p>
+          <h1>Crie sua conta e monte uma rotina de estudos mais clara.</h1>
+          <p>
+            Informe seus dados iniciais para preparar o perfil usado nas próximas fases do MindFlow AI.
+          </p>
+          <div class="auth-highlights">
+            <span>Plano por objetivo</span>
+            <span>Metas semanais</span>
+            <span>Preparação ENEM</span>
+          </div>
+        </div>
+
+        <form class="auth-card" aria-labelledby="signup-form-title">
+          <div>
+            <p class="eyebrow">Cadastro</p>
+            <h2 id="signup-form-title">Dados de acesso</h2>
+          </div>
+
+          <label class="field">
+            <span>Nome completo</span>
+            <input type="text" placeholder="Seu nome" autocomplete="name" />
+          </label>
+          <label class="field">
+            <span>E-mail</span>
+            <input type="email" placeholder="seuemail@exemplo.com" autocomplete="email" />
+          </label>
+          <label class="field">
+            <span>Senha</span>
+            <input type="password" placeholder="Crie uma senha" autocomplete="new-password" />
+          </label>
+          <label class="field">
+            <span>Objetivo principal</span>
+            <select>
+              <option>Preparar para o ENEM</option>
+              <option>Organizar rotina escolar</option>
+              <option>Melhorar desempenho</option>
+            </select>
+          </label>
+
+          <a class="button button--primary" href="perfil.html">Criar conta</a>
+          <p class="auth-switch">Já tem conta? <a href="login.html">Entrar</a></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="../main.js"></script>
+  </body>
+</html>

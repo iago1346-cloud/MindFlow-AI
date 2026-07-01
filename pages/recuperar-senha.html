@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Recuperação de senha do MindFlow AI." />
+    <title>Recuperar senha | MindFlow AI</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <nav class="navbar" aria-label="Navegação principal">
+        <a class="brand" href="../index.html" aria-label="MindFlow AI - página inicial">
+          <span class="brand__mark">M</span>
+          <span class="brand__text">MindFlow AI</span>
+        </a>
+        <ul class="nav-menu" id="primary-menu" data-menu>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="auth-page">
+      <section class="auth-layout auth-layout--single section">
+        <form class="auth-card" aria-labelledby="recovery-form-title">
+          <div>
+            <p class="eyebrow">Recuperação</p>
+            <h1 id="recovery-form-title">Recupere sua senha</h1>
+            <p>Informe seu e-mail para receber as próximas instruções de acesso.</p>
+          </div>
+
+          <label class="field">
+            <span>E-mail cadastrado</span>
+            <input type="email" placeholder="seuemail@exemplo.com" autocomplete="email" />
+          </label>
+
+          <button class="button button--primary" type="button">Enviar instruções</button>
+          <p class="auth-switch"><a href="login.html">Voltar para login</a></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="../main.js"></script>
+  </body>
+</html>
