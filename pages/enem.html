@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Preparatório ENEM do MindFlow AI com plano de estudos, simulados, banco de questões e redação." />
+    <title>Preparatório ENEM | MindFlow AI</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <nav class="navbar" aria-label="Navegação principal">
+        <a class="brand" href="../index.html" aria-label="MindFlow AI - página inicial">
+          <span class="brand__mark">M</span>
+          <span class="brand__text">MindFlow AI</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-menu" data-menu-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-menu" id="primary-menu" data-menu>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="planejamento.html">Planejamento</a></li>
+          <li><a href="assistente.html">Assistente IA</a></li>
+          <li><a href="desempenho.html">Desempenho</a></li>
+          <li><a href="lembretes.html">Lembretes</a></li>
+          <li><a href="conquistas.html">Conquistas</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="login.html">Sair</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="enem-page section">
+      <!-- Hero -->
+      <section class="dashboard-hero enem-hero" aria-labelledby="enem-title">
+        <div>
+          <p class="eyebrow">Preparatório ENEM</p>
+          <h1 id="enem-title">Seu plano completo rumo à nota 1000.</h1>
+          <p>Organize estudos por áreas do conhecimento, treine redação, resolva questões e acompanhe sua evolução para o ENEM.</p>
+        </div>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#plano">Criar plano de estudos</a>
+          <a class="button button--secondary" href="#simulados">Simular prova</a>
+        </div>
+      </section>
+
+      <!-- Métricas rápidas -->
+      <section class="metric-grid" aria-label="Resumo do preparatório">
+        <article class="dashboard-card metric-tile">
+          <span>Áreas em foco</span>
+          <strong>4</strong>
+          <p>Linguagens, Humanas, Natureza e Matemática</p>
+        </article>
+        <article class="dashboard-card metric-tile">
+          <span>Questões resolvidas</span>
+          <strong>247</strong>
+          <p>Meta da semana: 320</p>
+        </article>
+        <article class="dashboard-card metric-tile">
+          <span>Redações</span>
+          <strong>3</strong>
+ <p>Meta do mês: 8</p>        </article>
+        <article class="dashboard-card metric-tile">
+          <span>Simulados</span>
+ <strong>2</strong>
+          <p>Média: 680 pontos</p>
+        </article>
+      </section>
+
+      <!-- Organização por áreas -->
+      <section class="dashboard-card enem-areas" aria-labelledby="areas-title">
+        <div class="dashboard-card__header">
+          <div>
+            <p class="eyebrow">Áreas do conhecimento</p>
+ <h2 id="areas-title">Organização por áreas</h2>
+          </div>
+        </div>
+        <div class="area-grid">
+          <article class="area-card">
+            <span class="area-badge area-badge--lgg" aria-hidden="true">LG</span>
+            <h3>Linguagens</h3>
+            <div class="progress-track" aria-label="72% de progresso"><span style="width: 72%"></span></div>            <div class="area-card__info">
+              <span>72% concluído</span>
+              <span>48 questoes</span>
+            </div>
+          </article>
+          <article class="area-card">
+            <span class="area-badge area-badge--ch" aria-hidden="true">CH</span>
+            <h3>Ciências Humanas</h3>
+            <div class="progress-track" aria-label="58% de progresso"><span style="width: 58%"></span></div>
+            <div class="area-card__info">
+              <span>58% concluído</span>
+              <span>36 questóes</span>
+            </div>
+          </article>
+          <article class="area-card">
+            <span class="area-badge area-badge--cn" aria-hidden="true">CN</span>
+            <h3>Ciências da Natureza</h3>
+            <div class="progress-track" aria-label="45% de progresso"><span style="width: 45%"></span></div>
+            <div class="area-card__info">
+              <span>45% concluído</span>
+              <span>52 questóes</span>
+            </div>
+          </article>
+          <article class="area-card">
+            <span class="area-badge area-badge--mt" aria-hidden="true">MT</span>
+            <h3>Matemática</h3>
+            <div class="progress-track" aria-label="63% de progresso"><span style="width: 63%"></span></div>
+            <div class="area-card__info">
+              <span>63% concluído</span>
+              <span>74 questóes</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Plano de Estudos -->
+      <section class="dashboard-card enem-study-plan" id="plano" aria-labelledby="plan-title">
+        <div class="dashboard-card__header">
+          <div>
+            <p class="eyebrow">Plano de estudos</p>
+            <h2 id="plan-title">Cronograma ENEM</h2>
+          </div>
+          <span class="status-pill">Meta: 750+ pontos</span>
+        </div>
+        <div class="plan-week">
+          <article class="plan-day">
+            <time>Segunda</time>
+            <ul class="plan-day__list">
+              <li><span>08:00</span> Linguagens - Interpretação</li>
+              <li><span>14:00</span> Redação - Repertório</li>
+              <li><span>19:30</span> Revisão de Humanas</li>
+            </ul>
+          </article>
+          <article class="plan-day">
+            <time>Terça</time>
+            <ul class="plan-day__list">
+              <li><span>08:00</span> Matemática - Funções</li>
+              <li><span>14:00</span> Natureza - Biologia</li>
+              <li><span>19:30</span> Questões ENEM</li>
+            </ul>
+          </article>
+          <article class="plan-day">
+            <time>Quarta</time>
+            <ul class="plan-day__list">
+              <li><span>08:00</span> Redação - Introdução</li>
+              <li><span>14:00</span> Humanas - Geografia</li>
+              <li><span>19:30</span> Linguagens - Gramática</li>
+            </ul>
+          </article>
+          <article class="plan-day">
+            <time>Quinta</time>
+            <ul class="plan-day__list">
+              <li><span>08:00</span> Natureza - Química</li>
+              <li><span>14:00</span> Matemática - Geometria</li>
+              <li><span>19:30</span> Simulado parcial</li>
+            </ul>
+          </article>
+          <article class="plan-day">
+            <time>Sexta</time>
+            <ul class="plan-day__list">
+              <li><span>08:00</span> Redação - Desenvolvimento</li>
+              <li><span>14:00</span> Humanas - História</li>
+              <li><span>19:30</span> Revisão de erros</li>
+            </ul>
+          </article>
+          <article class="plan-day">
+            <time>Sábado</time>
+            <ul class="plan-day__list">
+              <li><span>09:00</span> Simulado completo</li>
+              <li><span>15:00</span> Correção guiada</li>
+            </ul>
+          </article>
+          <article class="plan-day">
+            <time>Domingo</time>
+            <ul class="plan-day__list">
+              <li><span>10:00</span> Revisão leve</li>
+              <li><span>16:00</span> Redação da semana</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Simulados e Banco de Questões -->
+      <section class="enem-grid" id="simulados">
+        <article class="dashboard-card enem-exams" aria-labelledby="exams-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Simulados</p>
+              <h2 id="exams-title">Simulados realizados</h2>
+            </div>
+          </div>
+          <div class="exam-list">
+            <article class="exam-card">
+              <div class="exam-card__header">
+                <strong>Simulado 01</strong>
+                <span class="status-pill">680 pts</span>
+              </div>
+              <div class="exam-card__subjects">
+                <span>LG: 72</span>
+                <span>CH: 65</span>
+                <span>CN: 58</span>
+                <span>MT: 64</span>
+              </div>
+              <p>15/01/2026 — 90 questões</p>
+            </article>
+            <article class="exam-card">
+              <div class="exam-card__header">
+                <strong>Simulado 02</strong>
+                <span class="status-pill">710 pts</span>
+              </div>
+              <div class="exam-card__subjects">
+                <span>LG: 76</span>
+                <span>CH: 68</span>
+                <span>CN: 62</span>
+                <span>MT: 70</span>
+              </div>
+              <p>02/02/2026 — 90 questões</p>
+            </article>
+            <article class="exam-card exam-card--next">
+              <div class="exam-card__header">
+                <strong>Simulado 03</strong>
+                <span class="status-pill">Agendado</span>
+              </div>
+              <p>Próximo simulado: 20/02/2026</p>
+              <button class="button button--primary" type="button" data-enem-exam>Iniciar simulado</button>
+            </article>
+          </div>
+        </article>
+
+        <aside class="dashboard-card enem-questions" aria-labelledby="questions-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Banco de questões</p>
+              <h2 id="questions-title">Questões para hoje</h2>
+            </div>
+          </div>
+          <div class="question-list">
+            <article class="question-card">
+              <span class="question-card__area area-badge--lg">LG</span>
+              <div>
+                <h3>Interpretação de texto</h3>
+                <p>Identificar tese e argumentos no texto base.</p>
+              </div>
+              <button class="button button--ghost" type="button" data-enem-question="LG">Resolver</button>
+            </article>
+            <article class="question-card">
+              <span class="question-card__area area-badge--mt">MT</span>
+              <div>
+                <h3>Análise de gráfico</h3>
+                <p>Calcular a média a partir de dados apresentados.</p>
+              </div>
+              <button class="button button--ghost" type="button" data-enem-question="MT">Resolver</button>
+            </article>
+            <article class="question-card">
+              <span class="question-card__area area-badge--cn">CN</span>
+              <div>
+                <h3>Evolução biológica</h3>
+                <p>Conceitos de seleção natural e adaptação.</p>
+              </div>
+              <button class="button button--ghost" type="button" data-enem-question="CN">Resolver</button>
+            </article>
+            <article class="question-card">
+              <span class="question-card__area area-badge--ch">CH</span>
+              <div>
+                <h3>Geopolítica mundial</h3>
+                <p>Conflitos e organizações internacionais.</p>
+              </div>
+              <button class="button button--ghost" type="button" data-enem-question="CH">Resolver</button>
+            </article>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Área de Redação -->
+      <section class="enem-grid enem-grid--bottom">
+        <article class="dashboard-card enem-essay" aria-labelledby="essay-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Redação Nota 1000</p>
+              <h2 id="essay-title">Redações</h2>
+            </div>
+            <a class="button button--primary" href="#" data-enem-essay-new>Nova redação</a>
+          </div>
+          <div class="essay-list">
+            <article class="essay-card">
+              <div class="essay-card__header">
+                <strong>Desafios da educação</strong>
+                <span class="status-pill">920 pts</span>
+              </div>
+              <p>Tema: Educação inclusiva no Brasil contemporâneo.</p>
+              <div class="essay-card__competences">
+                <span>C1: 200</span>
+                <span>C2: 200</span>
+                <span>C3: 180</span>
+                <span>C4: 160</span>
+                <span>C5: 180</span>
+              </div>
+            </article>
+            <article class="essay-card">
+              <div class="essay-card__header">
+                <strong>Meio ambiente e sociedade</strong>
+                <span class="status-pill">880 pts</span>
+              </div>
+              <p>Tema: Sustentabilidade e consumo consciente.</p>
+              <div class="essay-card__competences">
+                <span>C1: 200</span>
+                <span>C2: 180</span>
+                <span>C3: 160</span>
+                <span>C4: 180</span>
+                <span>C5: 160</span>
+              </div>
+            </article>
+            <article class="essay-card essay-card--draft">
+              <div class="essay-card__header">
+                <strong>Tecnologia e trabalho</strong>
+                <span class="status-pill">Rascunho</span>
+              </div>
+              <p>Tema: O futuro do trabalho na era digital.</p>
+              <button class="button button--secondary" type="button" data-enem-essay-edit>Continuar redação</button>
+            </article>
+          </div>
+        </article>
+
+        <aside class="dashboard-card enem-course-goals" aria-labelledby="course-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Metas por curso</p>
+              <h2 id="course-title">Progresso por curso</h2>
+            </div>
+          </div>
+          <div class="course-goal-list">
+            <article class="course-goal">
+              <div class="course-goal__info">
+                <strong>Medicina</strong>
+                <span>Nota de corte: 820</span>
+              </div>
+              <div class="progress-track" aria-label="78% do caminho para a meta"><span style="width: 78%"></span></div>
+              <span>Média atual: 680 pts</span>
+            </article>
+            <article class="course-goal">
+              <div class="course-goal__info">
+                <strong>Engenharia</strong>
+                <span>Nota de corte: 750</span>
+              </div>
+              <div class="progress-track" aria-label="90% do caminho para a meta"><span style="width: 90%"></span></div>
+              <span>Média atual: 680 pts</span>
+            </article>
+            <article class="course-goal">
+              <div class="course-goal__info">
+                <strong>Direito</strong>
+                <span>Nota de corte: 720</span>
+              </div>
+              <div class="progress-track" aria-label="94% do caminho para a meta"><span style="width: 94%"></span></div>
+              <span>Média atual: 680 pts</span>
+            </article>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Correção Automática -->
+      <section class="dashboard-card enem-correction" id="correcao" aria-labelledby="correction-title">
+        <div class="dashboard-card__header">
+          <div>
+            <p class="eyebrow">Correção automática</p>
+            <h2 id="correction-title">Resultados da última correção</h2>
+          </div>
+          <span class="status-pill">2 corrigidas</span>
+        </div>
+        <div class="correction-grid">
+          <article class="correction-card">
+            <div class="correction-card__header">
+              <strong>Redação - Educação</strong>
+              <span class="status-pill status-pill--success">920 pts</span>
+            </div>
+            <div class="correction-card__feedback">
+              <p><strong>Pontos fortes:</strong> Repertório bem articulado, domínio da norma culta.</p>
+              <p><strong>A melhorar:</strong> Proposta de intervenção mais detalhada.</p>
+            </div>
+          </article>
+          <article class="correction-card">
+            <div class="correction-card__header">
+              <strong>Simulado 02</strong>
+              <span class="status-pill status-pill--success">710 pts</span>
+            </div>
+            <div class="correction-card__feedback">
+              <p><strong>Evolução:</strong> +30 pontos em relação ao simulado anterior.</p>
+              <p><strong>Foco:</strong> Reforçar Natureza (58 pts) e Humanas (65 pts).</p>
+            </div>
+          </article>
+          <article class="correction-card">
+            <div class="correction-card__header">
+              <strong>Questões - Matemática</strong>
+              <span class="status-pill">12/20</span>
+            </div>
+            <div class="correction-card__feedback">
+              <p><strong>Acertos:</strong> Funções e geometria plana.</p>
+              <p><strong>Erros comuns:</strong> Probabilidade e estatística.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Evolução por área -->
+      <section class="enem-grid enem-grid--evolution">
+        <article class="dashboard-card enem-evolution" aria-labelledby="evolution-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Evolução por área</p>
+              <h2 id="evolution-title">Desempenho nos simulados</h2>
+            </div>
+          </div>
+          <div class="evolution-chart" aria-label="Gráfico de evolução por área">
+            <div class="evolution-bars">
+              <div class="evolution-bar-group">
+                <span>LG</span>
+                <div class="evolution-bar" style="height: 76%"><span>76</span></div>
+              </div>
+              <div class="evolution-bar-group">
+                <span>CH</span>
+                <div class="evolution-bar" style="height: 68%"><span>68</span></div>
+              </div>
+              <div class="evolution-bar-group">
+                <span>CN</span>
+                <div class="evolution-bar" style="height: 62%"><span>62</span></div>
+              </div>
+              <div class="evolution-bar-group">
+                <span>MT</span>
+                <div class="evolution-bar" style="height: 70%"><span>70</span></div>
+              </div>
+            </div>
+            <p>Média geral: 680 pontos | Meta: 750+</p>
+          </div>
+        </article>
+
+        <aside class="dashboard-card area-tips" aria-labelledby="tips-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Dicas personalizadas</p>
+              <h2 id="tips-title">Recomendações para evoluir</h2>
+            </div>
+          </div>
+          <div class="tips-list">
+            <article class="tip-item">
+              <span class="area-badge area-badge--cn">CN</span>
+              <div>
+                <h3>Reforçar Ciências da Natureza</h3>
+                <p>Foque em Química orgânica e Biologia molecular.</p>
+              </div>
+            </article>
+            <article class="tip-item">
+              <span class="area-badge area-badge--ch">CH</span>
+              <div>
+                <h3>Aprimorar Humanas</h3>
+                <p>Pratique questões de Geopolítica e Sociologia.</p>
+              </div>
+            </article>
+            <article class="tip-item">
+              <span class="area-badge area-badge--lg">LG</span>
+              <div>
+                <h3>Manter Linguagens</h3>
+                <p>Continue com interpretação e análise de obras.</p>
+              </div>
+            </article>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="../main.js"></script>
+  </body>
+</html>

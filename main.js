@@ -164,3 +164,59 @@ if (reminderDemoButton) {
     reminderDemoButton.insertAdjacentElement("afterend", feedback);
   });
 }
+
+/* ============================================================
+   Fase 11 — Preparatório ENEM
+   ============================================================ */
+
+const enemExamButton = document.querySelector("[data-enem-exam]");
+const enemQuestionButtons = document.querySelectorAll("[data-enem-question]");
+const enemEssayNewButton = document.querySelector("[data-enem-essay-new]");
+const enemEssayEditButton = document.querySelector("[data-enem-essay-edit]");
+
+function showEnemFeedback(target, message, isError = false) {
+  if (!target) return;
+
+  const existingFeedback = target.parentElement?.querySelector(".enem-feedback");
+  if (existingFeedback) {
+    existingFeedback.remove();
+  }
+
+  const feedback = document.createElement("p");
+  feedback.className = isError ? "enem-feedback enem-feedback--error" : "enem-feedback";
+  feedback.textContent = message;
+  target.insertAdjacentElement("afterend", feedback);
+}
+
+if (enemExamButton) {
+  enemExamButton.addEventListener("click", () => {
+    showEnemFeedback(enemExamButton, "Simulado iniciado. 90 questões — boa prova!");
+  });
+}
+
+enemQuestionButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const area = button.dataset.enemQuestion;
+    const areaName = {
+      LG: "Linguagens",
+      CH: "Humanas",
+      CN: "Natureza",
+      MT: "Matemática",
+    }[area] || "Questão";
+
+    showEnemFeedback(button, `${areaName}: questão adicionada ao simulado de hoje.`);
+  });
+});
+
+if (enemEssayNewButton) {
+  enemEssayNewButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    showEnemFeedback(enemEssayNewButton, "Nova redação criada. Tema sugerido: desafios da sociedade brasileira.");
+  });
+}
+
+if (enemEssayEditButton) {
+  enemEssayEditButton.addEventListener("click", () => {
+    showEnemFeedback(enemEssayEditButton, "Rascunho restaurado. Continue de onde parou.");
+  });
+}
