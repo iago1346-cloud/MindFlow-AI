@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contador regressivo para o ENEM no MindFlow AI com dias restantes, horas e mensagens motivacionais." />
+    <title>Contador ENEM | MindFlow AI</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <nav class="navbar" aria-label="Navegação principal">
+        <a class="brand" href="../index.html" aria-label="MindFlow AI - página inicial">
+          <span class="brand__mark">M</span>
+          <span class="brand__text">MindFlow AI</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-menu" data-menu-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-menu" id="primary-menu" data-menu>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="planejamento.html">Planejamento</a></li>
+          <li><a href="assistente.html">Assistente IA</a></li>
+          <li><a href="desempenho.html">Desempenho</a></li>
+          <li><a href="lembretes.html">Lembretes</a></li>
+          <li><a href="conquistas.html">Conquistas</a></li>
+          <li><a href="enem.html">ENEM</a></li>
+          <li><a href="dicas.html">Dicas</a></li>
+          <li><a href="contador.html">Contador</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="login.html">Sair</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="countdown-page section">
+      <!-- Hero -->
+      <section class="countdown-hero" aria-labelledby="countdown-title">
+        <div class="countdown-hero__content">
+          <p class="eyebrow">Contador regressivo ENEM</p>
+          <h1 id="countdown-title">Cada dia conta. Você está mais perto do que imagina.</h1>
+          <p>Faltam <strong data-countdown-days>0</strong> dias para o ENEM. Use esse tempo com estratégia, constância e foco no que realmente importa.</p>
+        </div>
+        <div class="countdown-display" aria-label="Tempo restante para o ENEM">
+          <div class="countdown-unit">
+            <strong data-countdown-days>0</strong>
+            <span>Dias</span>
+          </div>
+          <div class="countdown-unit">
+            <strong data-countdown-hours>0</strong>
+            <span>Horas</span>
+          </div>
+          <div class="countdown-unit">
+            <strong data-countdown-minutes>0</strong>
+            <span>Minutos</span>
+          </div>
+          <div class="countdown-unit">
+            <strong data-countdown-seconds>0</strong>
+            <span>Segundos</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mensagem motivacional -->
+      <section class="dashboard-card motivation-card" aria-labelledby="motivation-title">
+        <div class="dashboard-card__header">
+          <div>
+            <p class="eyebrow">Mensagem do dia</p>
+            <h2 id="motivation-title">Motivação para hoje</h2>
+          </div>
+          <span class="status-pill">Diária</span>
+        </div>
+        <div class="motivation-content">
+          <span class="motivation-icon" aria-hidden="true">🔥</span>
+          <div>
+            <h3 data-motivation-title>Você já percorreu um longo caminho</h3>
+            <p data-motivation-text>Cada hora de estudo, cada questão resolvida e cada redação escrita te aproxima do seu objetivo. Continue firme — a constância vence o talento quando o talento não é constante.</p>
+          </div>
+          <button class="button button--ghost" type="button" data-motivation-new>Nova mensagem</button>
+        </div>
+      </section>
+
+      <!-- Barra de progresso -->
+      <section class="dashboard-card progress-section" aria-labelledby="progress-title">
+        <div class="dashboard-card__header">
+          <div>
+            <p class="eyebrow">Progresso</p>
+            <h2 id="progress-title">Sua jornada até o ENEM</h2>
+          </div>
+          <strong data-progress-percent>0%</strong>
+        </div>
+        <div class="progress-track countdown-progress" aria-label="Progresso até o ENEM">
+          <span data-progress-bar style="width: 0%"></span>
+        </div>
+        <div class="progress-labels">
+          <span>Início da preparação</span>
+          <span>Dia do ENEM</span>
+        </div>
+        <p class="progress-note" data-progress-note>Você já completou parte da sua preparação. Continue assim!</p>
+      </section>
+
+      <!-- Dicas para os dias restantes -->
+      <section class="countdown-grid">
+        <article class="dashboard-card countdown-tips" aria-labelledby="countdown-tips-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Plano para os próximos dias</p>
+              <h2 id="countdown-tips-title">Como usar o tempo restante</h2>
+            </div>
+          </div>
+          <div class="countdown-tip-list">
+            <article class="countdown-tip">
+              <span class="countdown-tip__num">01</span>
+              <div>
+                <h3>Revise os conteúdos mais cobrados</h3>
+                <p>Priorize tópicos com maior incidência nas provas anteriores.</p>
+              </div>
+            </article>
+            <article class="countdown-tip">
+              <span class="countdown-tip__num">02</span>
+              <div>
+                <h3>Treine com simulados cronometrados</h3>
+                <p>Simule as condições reais da prova para controlar o tempo.</p>
+              </div>
+            </article>
+            <article class="countdown-tip">
+              <span class="countdown-tip__num">03</span>
+              <div>
+                <h3>Mantenha a redação em dia</h3>
+                <p>Escreva ao menos uma redação por semana e revise as competências.</p>
+              </div>
+            </article>
+            <article class="countdown-tip">
+              <span class="countdown-tip__num">04</span>
+              <div>
+                <h3>Cuide do corpo e da mente</h3>
+                <p>Durma bem, alimente-se de forma equilibrada e faça pausas ativas.</p>
+              </div>
+            </article>
+          </div>
+        </article>
+
+        <aside class="dashboard-card countdown-stats" aria-labelledby="countdown-stats-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Seus números</p>
+              <h2 id="countdown-stats-title">Resumo da preparação</h2>
+            </div>
+          </div>
+          <div class="countdown-stat-list">
+            <article class="countdown-stat">
+              <span>Horas estudadas</span>
+              <strong>247h</strong>
+              <p>Desde o início da preparação</p>
+            </article>
+            <article class="countdown-stat">
+              <span>Questões resolvidas</span>
+              <strong>1.240</strong>
+              <p>Média de 18 por dia</p>
+            </article>
+            <article class="countdown-stat">
+              <span>Redações escritas</span>
+              <strong>14</strong>
+              <p>Média de 920 pontos</p>
+            </article>
+            <article class="countdown-stat">
+              <span>Simulados completos</span>
+              <strong>6</strong>
+              <p>Evolução de 620 → 710 pts</p>
+            </article>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="../main.js"></script>
+  </body>
+</html>

@@ -288,3 +288,128 @@ if (tipsNewButton) {
     showTipFeedback(tipsNewButton, `Dica ${currentTipIndex + 1} de ${dailyTips.length} carregada.`);
   });
 }
+
+/* ============================================================
+   Fase 13 — Contador Regressivo ENEM
+   ============================================================ */
+
+const countdownDaysElements = document.querySelectorAll("[data-countdown-days]");
+const countdownHoursElement = document.querySelector("[data-countdown-hours]");
+const countdownMinutesElement = document.querySelector("[data-countdown-minutes]");
+const countdownSecondsElement = document.querySelector("[data-countdown-seconds]");
+const progressBar = document.querySelector("[data-progress-bar]");
+const progressPercent = document.querySelector("[data-progress-percent]");
+const progressNote = document.querySelector("[data-progress-note]");
+const motivationNewButton = document.querySelector("[data-motivation-new]");
+const motivationTitle = document.querySelector("[data-motivation-title]");
+const motivationText = document.querySelector("[data-motivation-text]");
+
+const ENEM_DATE = new Date("2026-11-01T13:00:00");
+const PREP_START_DATE = new Date("2025-01-01T00:00:00");
+
+const motivationalMessages = [
+  {
+    title: "Você já percorreu um longo caminho",
+    text: "Cada hora de estudo, cada questão resolvida e cada redação escrita te aproxima do seu objetivo. Continue firme — a constância vence o talento quando o talento não é constante.",
+  },
+  {
+    title: "O esforço de hoje é o resultado de amanhã",
+    text: "Não subestime o poder de um dia bem aproveitado. Pequenas ações diárias constroem grandes conquistas.",
+  },
+  {
+    title: "Você é mais forte do que imagina",
+    text: "Já superou desafios antes e vai superar este também. Confie no processo e no seu preparo.",
+  },
+  {
+    title: "Foco no que você pode controlar",
+    text: "Não se preocupe com o resultado final agora. Concentre-se em estudar bem hoje, amanhã e todos os dias até a prova.",
+  },
+  {
+    title: "Cada questão conta",
+    text: "Uma questão a mais resolvida hoje pode ser a diferença entre a aprovação e a lista de espera. Continue praticando.",
+  },
+  {
+    title: "Sua história ainda está sendo escrita",
+    text: "O ENEM é apenas um capítulo. Escreva cada página com dedicação, e o final será digno do seu esforço.",
+  },
+];
+
+let currentMotivationIndex = 0;
+
+function updateCountdown() {
+  const now = new Date();
+  const diff = ENEM_DATE - now;
+
+  if (diff <= 0) {
+    countdownDaysElements.forEach((el) => (el.textContent = "0"));
+    if (countdownHoursElement) countdownHoursElement.textContent = "0";
+    if (countdownMinutesElement) countdownMinutesElement.textContent = "0";
+    if (countdownSecondsElement) countdownSecondsElement.textContent = "0";
+    return;
+  }
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+  countdownDaysElements.forEach((el) => (el.textContent = String(days)));
+  if (countdownHoursElement) countdownHoursElement.textContent = String(hours).padStart(2, "0");
+  if (countdownMinutesElement) countdownMinutesElement.textContent = String(minutes).padStart(2, "0");
+  if (countdownSecondsElement) countdownSecondsElement.textContent = String(seconds).padStart(2, "0");
+
+  const totalDuration = ENEM_DATE - PREP_START_DATE;
+  const elapsed = now - PREP_START_DATE;
+  const percent = Math.min(100, Math.max(0, Math.round((elapsed / totalDuration) * 100)));
+
+  if (progressBar) {
+    progressBar.style.width = `${percent}%`;
+  }
+  if (progressPercent) {
+    progressPercent.textContent = `${percent}%`;
+  }
+  if (progressNote) {
+    if (percent < 30) {
+      progressNote.textContent = "Você está no início da preparação. Estabeleça uma rotina sólida agora!";
+    } else if (percent < 60) {
+      progressNote.textContent = "Bom progresso! Continue mantendo a constância nos estudos.";
+    } else if (percent < 85) {
+      progressNote.textContent = "Você já completou grande parte da preparação. Foque nas revisões!";
+    } else {
+      progressNote.textContent = "Fase final! Revise os pontos fracos e mantenha a calma.";
+    }
+  }
+}
+
+function showCountdownFeedback(target, message) {
+  if (!target) return;
+
+  const existingFeedback = target.parentElement?.querySelector(".countdown-feedback");
+  if (existingFeedback) {
+    existingFeedback.remove();
+  }
+
+  const feedback = document.createElement("p");
+  feedback.className = "countdown-feedback";
+  feedback.textContent = message;
+  target.insertAdjacentElement("afterend", feedback);
+}
+
+if (motivationNewButton) {
+  motivationNewButton.addEventListener("click", () => {
+    currentMotivationIndex = (currentMotivationIndex + 1) % motivationalMessages.length;
+    const message = motivationalMessages[currentMotivationIndex];
+
+    if (motivationTitle) {
+      motivationTitle.textContent = message.title;
+    }
+    if (motivationText) {
+      motivationText.textContent = message.text;
+    }
+
+    showCountdownFeedback(motivationNewButton, `Mensagem ${currentMotivationIndex + 1} de ${motivationalMessages.length}.`);
+  });
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);

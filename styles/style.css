@@ -2867,3 +2867,254 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   Fase 13 — Contador Regressivo ENEM
+   ============================================================ */
+
+.countdown-page {
+  display: grid;
+  gap: 22px;
+}
+
+.countdown-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  align-items: center;
+  gap: 32px;
+  padding: 34px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(32, 87, 214, 0.14), transparent 48%),
+    var(--color-surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.countdown-hero h1 {
+  max-width: 720px;
+  font-size: 3rem;
+}
+
+.countdown-hero p {
+  max-width: 680px;
+  margin: 14px 0 0;
+  color: var(--color-muted);
+}
+
+.countdown-hero p strong {
+  color: var(--color-primary-dark);
+  font-size: 1.2rem;
+}
+
+.countdown-display {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.countdown-unit {
+  display: grid;
+  gap: 6px;
+  justify-items: center;
+  padding: 18px 12px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-surface-strong);
+}
+
+.countdown-unit strong {
+  color: var(--color-primary-dark);
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.countdown-unit span {
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.motivation-card,
+.progress-section,
+.countdown-tips,
+.countdown-stats {
+  padding: 24px;
+}
+
+.motivation-content {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-surface-strong);
+}
+
+.motivation-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: var(--radius);
+  background: rgba(240, 180, 41, 0.16);
+  font-size: 1.4rem;
+}
+
+.motivation-content h3 {
+  margin-bottom: 6px;
+  font-size: 1.05rem;
+}
+
+.motivation-content p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.countdown-progress {
+  height: 16px;
+}
+
+.progress-labels {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.progress-note {
+  margin: 14px 0 0;
+  color: var(--color-muted);
+  font-weight: 700;
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  gap: 18px;
+}
+
+.countdown-tip-list {
+  display: grid;
+  gap: 12px;
+}
+
+.countdown-tip {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-surface-strong);
+}
+
+.countdown-tip__num {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: var(--radius);
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 900;
+  font-size: 0.86rem;
+}
+
+.countdown-tip h3 {
+  margin-bottom: 4px;
+  font-size: 0.94rem;
+}
+
+.countdown-tip p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.84rem;
+}
+
+.countdown-stat-list {
+  display: grid;
+  gap: 12px;
+}
+
+.countdown-stat {
+  padding: 14px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-surface-strong);
+}
+
+.countdown-stat span {
+  color: var(--color-muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.countdown-stat strong {
+  display: block;
+  margin: 6px 0;
+  color: var(--color-primary-dark);
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.countdown-stat p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.82rem;
+}
+
+.countdown-feedback {
+  margin-top: 14px;
+  padding: 12px;
+  border: 1px solid rgba(23, 169, 132, 0.22);
+  border-radius: var(--radius);
+  background: rgba(23, 169, 132, 0.1);
+  color: #08745a;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 860px) {
+  .countdown-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .countdown-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .motivation-content {
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+
+  .motivation-content .button {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 520px) {
+  .countdown-display {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .countdown-hero {
+    padding: 24px;
+  }
+
+  .countdown-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .countdown-tip {
+    grid-template-columns: 1fr;
+  }
+}
