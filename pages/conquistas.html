@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sistema de conquistas do MindFlow AI com medalhas, XP, níveis e recompensas." />
+    <title>Conquistas | MindFlow AI</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <nav class="navbar" aria-label="Navegação principal">
+        <a class="brand" href="../index.html" aria-label="MindFlow AI - página inicial">
+          <span class="brand__mark">M</span>
+          <span class="brand__text">MindFlow AI</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-menu" data-menu-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-menu" id="primary-menu" data-menu>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="planejamento.html">Planejamento</a></li>
+          <li><a href="assistente.html">Assistente IA</a></li>
+          <li><a href="desempenho.html">Desempenho</a></li>
+          <li><a href="lembretes.html">Lembretes</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="login.html">Sair</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="achievements-page section">
+      <section class="dashboard-hero achievements-hero" aria-labelledby="achievements-title">
+        <div>
+          <p class="eyebrow">Sistema de conquistas</p>
+          <h1 id="achievements-title">Transforme constância em progresso visível.</h1>
+          <p>Ganhe XP, suba de nível, mantenha sua sequência de estudos e desbloqueie medalhas por metas concluídas.</p>
+        </div>
+        <a class="button button--primary" href="#medalhas">Ver medalhas</a>
+      </section>
+
+      <section class="metric-grid" aria-label="Resumo de conquistas">
+        <article class="dashboard-card metric-tile">
+          <span>Nível atual</span>
+          <strong>12</strong>
+          <p>Estudante estratégico</p>
+        </article>
+        <article class="dashboard-card metric-tile">
+          <span>XP acumulado</span>
+          <strong>4.820</strong>
+          <p>180 XP para o próximo nível</p>
+        </article>
+        <article class="dashboard-card metric-tile">
+          <span>Streak</span>
+          <strong>12 dias</strong>
+          <p>Sequência ativa de estudos</p>
+        </article>
+        <article class="dashboard-card metric-tile">
+          <span>Medalhas</span>
+          <strong>8</strong>
+          <p>3 raras desbloqueadas</p>
+        </article>
+      </section>
+
+      <section class="achievements-grid">
+        <article class="dashboard-card level-panel" aria-labelledby="level-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Experiência</p>
+              <h2 id="level-title">Progresso de nível</h2>
+            </div>
+            <span class="status-pill">Nível 12</span>
+          </div>
+          <div class="xp-track">
+            <div class="xp-track__info">
+              <strong>4.820 XP</strong>
+              <span>5.000 XP</span>
+            </div>
+            <div class="progress-track dashboard-progress" aria-label="96% do nível atual concluído">
+              <span style="width: 96%"></span>
+            </div>
+          </div>
+          <div class="reward-preview">
+            <span class="reward-icon" aria-hidden="true">XP</span>
+            <div>
+              <h3>Próxima recompensa</h3>
+              <p>Desbloqueie o selo “Semana Impecável” ao completar mais 180 XP.</p>
+            </div>
+          </div>
+        </article>
+
+        <aside class="dashboard-card streak-panel" aria-labelledby="streak-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Sequência</p>
+              <h2 id="streak-title">Streak semanal</h2>
+            </div>
+          </div>
+          <div class="streak-days" aria-label="Sequência de estudos da semana">
+            <span class="is-complete">Seg</span>
+            <span class="is-complete">Ter</span>
+            <span class="is-complete">Qua</span>
+            <span class="is-complete">Qui</span>
+            <span class="is-complete">Sex</span>
+            <span>Sáb</span>
+            <span>Dom</span>
+          </div>
+          <p>Complete mais dois dias para fechar uma semana perfeita.</p>
+        </aside>
+      </section>
+
+      <section class="dashboard-card achievements-panel" id="medalhas" aria-labelledby="badges-title">
+        <div class="dashboard-card__header">
+          <div>
+            <p class="eyebrow">Medalhas</p>
+            <h2 id="badges-title">Conquistas desbloqueadas</h2>
+          </div>
+        </div>
+
+        <div class="badge-grid">
+          <article class="badge-card badge-card--earned">
+            <span class="badge-icon" aria-hidden="true">1</span>
+            <h3>Primeira meta</h3>
+            <p>Concluiu a primeira meta diária.</p>
+          </article>
+          <article class="badge-card badge-card--earned">
+            <span class="badge-icon" aria-hidden="true">7</span>
+            <h3>Semana firme</h3>
+            <p>Estudou por 7 dias seguidos.</p>
+          </article>
+          <article class="badge-card badge-card--earned">
+            <span class="badge-icon" aria-hidden="true">R</span>
+            <h3>Redação em dia</h3>
+            <p>Entregou 3 redações no mês.</p>
+          </article>
+          <article class="badge-card">
+            <span class="badge-icon" aria-hidden="true">30</span>
+            <h3>Mês imparável</h3>
+            <p>Mantenha 30 dias de sequência.</p>
+          </article>
+          <article class="badge-card">
+            <span class="badge-icon" aria-hidden="true">S</span>
+            <h3>Simulado mestre</h3>
+            <p>Complete 5 simulados com revisão.</p>
+          </article>
+          <article class="badge-card">
+            <span class="badge-icon" aria-hidden="true">M</span>
+            <h3>Matemática forte</h3>
+            <p>Alcance 80% de progresso na matéria.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="achievements-grid achievements-grid--bottom">
+        <article class="dashboard-card rewards-panel" aria-labelledby="rewards-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Recompensas</p>
+              <h2 id="rewards-title">Prêmios pessoais</h2>
+            </div>
+          </div>
+          <div class="reward-list">
+            <article>
+              <strong>15 minutos de pausa</strong>
+              <span class="status-pill">Disponível</span>
+            </article>
+            <article>
+              <strong>Revisão leve no domingo</strong>
+              <span class="status-pill">Bloqueada</span>
+            </article>
+            <article>
+              <strong>Simulado com tema escolhido</strong>
+              <span class="status-pill">Disponível</span>
+            </article>
+          </div>
+        </article>
+
+        <aside class="dashboard-card ranking-panel" aria-labelledby="ranking-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Ranking pessoal</p>
+              <h2 id="ranking-title">Melhores semanas</h2>
+            </div>
+          </div>
+          <div class="ranking-list">
+            <article>
+              <span>1</span>
+              <div>
+                <strong>Semana atual</strong>
+                <p>22h previstas, 15h concluídas</p>
+              </div>
+              <b>4.820 XP</b>
+            </article>
+            <article>
+              <span>2</span>
+              <div>
+                <strong>Semana ENEM</strong>
+                <p>18 metas concluídas</p>
+              </div>
+              <b>4.120 XP</b>
+            </article>
+            <article>
+              <span>3</span>
+              <div>
+                <strong>Semana de revisão</strong>
+                <p>12 revisões completas</p>
+              </div>
+              <b>3.740 XP</b>
+            </article>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="../main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sistema de lembretes do MindFlow AI para estudos, revisões e simulados." />
+    <title>Lembretes | MindFlow AI</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <nav class="navbar" aria-label="Navegação principal">
+        <a class="brand" href="../index.html" aria-label="MindFlow AI - página inicial">
+          <span class="brand__mark">M</span>
+          <span class="brand__text">MindFlow AI</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-menu" data-menu-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-menu" id="primary-menu" data-menu>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="planejamento.html">Planejamento</a></li>
+          <li><a href="assistente.html">Assistente IA</a></li>
+          <li><a href="desempenho.html">Desempenho</a></li>
+          <li><a href="conquistas.html">Conquistas</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="login.html">Sair</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="reminders-page section">
+      <section class="dashboard-hero reminders-hero" aria-labelledby="reminders-title">
+        <div>
+          <p class="eyebrow">Sistema de lembretes</p>
+          <h1 id="reminders-title">Não perca estudos, revisões e simulados importantes.</h1>
+          <p>Organize sua agenda diária com avisos por tipo de atividade, prioridade e horário.</p>
+        </div>
+        <a class="button button--primary" href="#novo-lembrete">Criar lembrete</a>
+      </section>
+
+      <section class="metric-grid" aria-label="Resumo dos lembretes">
+        <article class="dashboard-card metric-tile">
+          <span>Lembretes hoje</span>
+          <strong>5</strong>
+          <p>3 estudos, 1 revisão e 1 simulado</p>
+        </article>
+        <article class="dashboard-card metric-tile">
+          <span>Próximo aviso</span>
+          <strong>14:00</strong>
+          <p>Simulado de Linguagens</p>
+        </article>
+        <article class="dashboard-card metric-tile">
+          <span>Revisões</span>
+          <strong>2</strong>
+          <p>Matemática e Biologia</p>
+        </article>
+        <article class="dashboard-card metric-tile">
+          <span>Notificações</span>
+          <strong>Ativas</strong>
+          <p>Agenda diária habilitada</p>
+        </article>
+      </section>
+
+      <section class="reminders-grid">
+        <form class="dashboard-card reminder-form" id="novo-lembrete" aria-labelledby="new-reminder-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Novo lembrete</p>
+              <h2 id="new-reminder-title">Agendar aviso</h2>
+            </div>
+          </div>
+
+          <label class="field">
+            <span>Título</span>
+            <input type="text" placeholder="Ex: Revisar funções" />
+          </label>
+          <div class="form-pair">
+            <label class="field">
+              <span>Tipo</span>
+              <select>
+                <option>Estudo</option>
+                <option>Revisão</option>
+                <option>Simulado</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Prioridade</span>
+              <select>
+                <option>Alta</option>
+                <option>Média</option>
+                <option>Baixa</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-pair">
+            <label class="field">
+              <span>Data</span>
+              <input type="date" value="2026-08-05" />
+            </label>
+            <label class="field">
+              <span>Horário</span>
+              <input type="time" value="19:30" />
+            </label>
+          </div>
+          <label class="field field--full">
+            <span>Observação</span>
+            <textarea rows="4" placeholder="Anote o conteúdo, meta ou material necessário"></textarea>
+          </label>
+          <button class="button button--primary" type="button" data-reminder-demo>Criar lembrete</button>
+        </form>
+
+        <aside class="dashboard-card notification-panel" aria-labelledby="notifications-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Notificações</p>
+              <h2 id="notifications-title">Preferências</h2>
+            </div>
+          </div>
+
+          <div class="settings-list">
+            <label class="setting-item">
+              <span>
+                <strong>Antes do estudo</strong>
+                <small>Avisar 15 minutos antes de cada bloco.</small>
+              </span>
+              <input type="checkbox" checked />
+            </label>
+            <label class="setting-item">
+              <span>
+                <strong>Revisões atrasadas</strong>
+                <small>Mostrar alerta quando uma revisão vencer.</small>
+              </span>
+              <input type="checkbox" checked />
+            </label>
+            <label class="setting-item">
+              <span>
+                <strong>Simulados</strong>
+                <small>Destacar simulados na agenda diária.</small>
+              </span>
+              <input type="checkbox" checked />
+            </label>
+          </div>
+        </aside>
+      </section>
+
+      <section class="reminders-grid reminders-grid--wide">
+        <article class="dashboard-card daily-agenda" aria-labelledby="daily-agenda-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Agenda diária</p>
+              <h2 id="daily-agenda-title">Hoje, 05 de agosto</h2>
+            </div>
+            <span class="status-pill">5 avisos</span>
+          </div>
+
+          <div class="reminder-list">
+            <article>
+              <time>08:00</time>
+              <div>
+                <span class="reminder-type reminder-type--study">Estudo</span>
+                <h3>Matemática: funções</h3>
+                <p>Resolver lista curta e registrar dúvidas.</p>
+              </div>
+              <span class="priority priority--high">Alta</span>
+            </article>
+            <article>
+              <time>11:30</time>
+              <div>
+                <span class="reminder-type reminder-type--review">Revisão</span>
+                <h3>Biologia: genética</h3>
+                <p>Rever erros do último simulado.</p>
+              </div>
+              <span class="priority priority--medium">Média</span>
+            </article>
+            <article>
+              <time>14:00</time>
+              <div>
+                <span class="reminder-type reminder-type--exam">Simulado</span>
+                <h3>Linguagens</h3>
+                <p>20 questões com tempo controlado.</p>
+              </div>
+              <span class="priority priority--high">Alta</span>
+            </article>
+            <article>
+              <time>19:30</time>
+              <div>
+                <span class="reminder-type reminder-type--review">Revisão</span>
+                <h3>Redação</h3>
+                <p>Revisar tese, repertório e conectivos.</p>
+              </div>
+              <span class="priority priority--medium">Média</span>
+            </article>
+          </div>
+        </article>
+
+        <aside class="dashboard-card review-alerts" aria-labelledby="review-alerts-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Revisões</p>
+              <h2 id="review-alerts-title">Alertas importantes</h2>
+            </div>
+          </div>
+
+          <div class="completed-goals">
+            <article>
+              <span class="status-pill">Hoje</span>
+              <h3>Funções quadráticas</h3>
+              <p>Conteúdo com desempenho abaixo de 70%.</p>
+            </article>
+            <article>
+              <span class="status-pill">Amanhã</span>
+              <h3>Ecologia</h3>
+              <p>Revisão espaçada programada.</p>
+            </article>
+            <article>
+              <span class="status-pill">Sábado</span>
+              <h3>Simulado ENEM</h3>
+              <p>Separar 2 horas para prova demonstrativa.</p>
+            </article>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="../main.js"></script>
+  </body>
+</html>

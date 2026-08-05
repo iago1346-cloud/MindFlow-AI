@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dashboard de desempenho do estudante no MindFlow AI." />
+    <title>Desempenho | MindFlow AI</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <nav class="navbar" aria-label="Navegação principal">
+        <a class="brand" href="../index.html" aria-label="MindFlow AI - página inicial">
+          <span class="brand__mark">M</span>
+          <span class="brand__text">MindFlow AI</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-menu" data-menu-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-menu" id="primary-menu" data-menu>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="planejamento.html">Planejamento</a></li>
+          <li><a href="assistente.html">Assistente IA</a></li>
+          <li><a href="lembretes.html">Lembretes</a></li>
+          <li><a href="conquistas.html">Conquistas</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="login.html">Sair</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="performance section">
+      <section class="dashboard-hero performance-hero" aria-labelledby="performance-title">
+        <div>
+          <p class="eyebrow">Dashboard de desempenho</p>
+          <h1 id="performance-title">Acompanhe sua evolução com clareza.</h1>
+          <p>Veja horas estudadas, evolução semanal e mensal, desempenho por matéria, metas concluídas e histórico recente.</p>
+        </div>
+        <a class="button button--primary" href="#historico">Ver histórico</a>
+      </section>
+
+      <section class="metric-grid" aria-label="Indicadores de desempenho">
+        <article class="dashboard-card metric-tile">
+          <span>Horas estudadas</span>
+          <strong>42h</strong>
+          <p>No mês atual</p>
+        </article>
+        <article class="dashboard-card metric-tile">
+          <span>Evolução semanal</span>
+          <strong>+18%</strong>
+          <p>Comparado à semana anterior</p>
+        </article>
+        <article class="dashboard-card metric-tile">
+          <span>Metas concluídas</span>
+          <strong>24</strong>
+          <p>De 31 metas planejadas</p>
+        </article>
+        <article class="dashboard-card metric-tile">
+          <span>Melhor matéria</span>
+          <strong>Redação</strong>
+          <p>82% de consistência</p>
+        </article>
+      </section>
+
+      <section class="performance-grid">
+        <article class="dashboard-card performance-panel" aria-labelledby="weekly-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Evolução semanal</p>
+              <h2 id="weekly-title">Horas por dia</h2>
+            </div>
+            <span class="status-pill">7 dias</span>
+          </div>
+          <div class="bar-chart performance-chart" aria-label="Evolução semanal de horas estudadas">
+            <span style="height: 42%"><strong>Seg</strong></span>
+            <span style="height: 64%"><strong>Ter</strong></span>
+            <span style="height: 58%"><strong>Qua</strong></span>
+            <span style="height: 78%"><strong>Qui</strong></span>
+            <span style="height: 69%"><strong>Sex</strong></span>
+            <span style="height: 48%"><strong>Sáb</strong></span>
+            <span style="height: 72%"><strong>Dom</strong></span>
+          </div>
+        </article>
+
+        <article class="dashboard-card performance-panel" aria-labelledby="monthly-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Evolução mensal</p>
+              <h2 id="monthly-title">Últimas 4 semanas</h2>
+            </div>
+            <span class="status-pill">Julho</span>
+          </div>
+          <div class="line-chart" aria-label="Evolução mensal por semana">
+            <span style="height: 38%"><strong>S1</strong></span>
+            <span style="height: 54%"><strong>S2</strong></span>
+            <span style="height: 63%"><strong>S3</strong></span>
+            <span style="height: 76%"><strong>S4</strong></span>
+          </div>
+        </article>
+      </section>
+
+      <section class="performance-grid performance-grid--bottom">
+        <article class="dashboard-card performance-panel" aria-labelledby="subjects-performance-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Desempenho por matéria</p>
+              <h2 id="subjects-performance-title">Áreas em foco</h2>
+            </div>
+          </div>
+          <div class="subject-score-list">
+            <article>
+              <div>
+                <strong>Redação</strong>
+                <span>82%</span>
+              </div>
+              <div class="progress-track"><span style="width: 82%"></span></div>
+            </article>
+            <article>
+              <div>
+                <strong>Matemática</strong>
+                <span>64%</span>
+              </div>
+              <div class="progress-track"><span style="width: 64%"></span></div>
+            </article>
+            <article>
+              <div>
+                <strong>Natureza</strong>
+                <span>58%</span>
+              </div>
+              <div class="progress-track"><span style="width: 58%"></span></div>
+            </article>
+            <article>
+              <div>
+                <strong>Humanas</strong>
+                <span>71%</span>
+              </div>
+              <div class="progress-track"><span style="width: 71%"></span></div>
+            </article>
+          </div>
+        </article>
+
+        <article class="dashboard-card performance-panel" aria-labelledby="goals-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Metas concluídas</p>
+              <h2 id="goals-title">Conquistas recentes</h2>
+            </div>
+          </div>
+          <div class="completed-goals">
+            <article>
+              <span class="status-pill">Concluída</span>
+              <h3>Revisar funções</h3>
+              <p>Meta finalizada em 1h 20min.</p>
+            </article>
+            <article>
+              <span class="status-pill">Concluída</span>
+              <h3>Escrever redação</h3>
+              <p>Introdução, tese e dois argumentos prontos.</p>
+            </article>
+            <article>
+              <span class="status-pill">Concluída</span>
+              <h3>Simulado de Biologia</h3>
+              <p>18 questões resolvidas com revisão de erros.</p>
+            </article>
+          </div>
+        </article>
+      </section>
+
+      <section class="dashboard-card performance-panel history-panel" id="historico" aria-labelledby="history-title">
+        <div class="dashboard-card__header">
+          <div>
+            <p class="eyebrow">Histórico</p>
+            <h2 id="history-title">Registro de atividades</h2>
+          </div>
+        </div>
+        <div class="history-table" role="table" aria-label="Histórico de estudos">
+          <div role="row">
+            <strong role="columnheader">Data</strong>
+            <strong role="columnheader">Atividade</strong>
+            <strong role="columnheader">Matéria</strong>
+            <strong role="columnheader">Resultado</strong>
+          </div>
+          <div role="row">
+            <span role="cell">05/08</span>
+            <span role="cell">Revisão guiada</span>
+            <span role="cell">Matemática</span>
+            <span role="cell">64% de acerto</span>
+          </div>
+          <div role="row">
+            <span role="cell">04/08</span>
+            <span role="cell">Redação completa</span>
+            <span role="cell">Redação</span>
+            <span role="cell">Meta concluída</span>
+          </div>
+          <div role="row">
+            <span role="cell">03/08</span>
+            <span role="cell">Simulado curto</span>
+            <span role="cell">Natureza</span>
+            <span role="cell">18 questões</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../main.js"></script>
+  </body>
+</html>

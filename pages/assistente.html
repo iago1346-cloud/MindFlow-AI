@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Assistente de IA do MindFlow AI para organização de estudos." />
+    <title>Assistente IA | MindFlow AI</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <nav class="navbar" aria-label="Navegação principal">
+        <a class="brand" href="../index.html" aria-label="MindFlow AI - página inicial">
+          <span class="brand__mark">M</span>
+          <span class="brand__text">MindFlow AI</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-menu" data-menu-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-menu" id="primary-menu" data-menu>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="planejamento.html">Planejamento</a></li>
+          <li><a href="desempenho.html">Desempenho</a></li>
+          <li><a href="lembretes.html">Lembretes</a></li>
+          <li><a href="conquistas.html">Conquistas</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="login.html">Sair</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="assistant-page section">
+      <section class="dashboard-hero assistant-hero" aria-labelledby="assistant-title">
+        <div>
+          <p class="eyebrow">Assistente de IA</p>
+          <h1 id="assistant-title">Receba orientação personalizada para estudar melhor.</h1>
+          <p>Converse com o assistente, peça sugestões de revisão, organize prioridades e descubra próximos passos para a sua rotina.</p>
+        </div>
+        <a class="button button--primary" href="#chat-ia">Abrir chat</a>
+      </section>
+
+      <section class="assistant-layout">
+        <aside class="dashboard-card assistant-sidebar" aria-labelledby="suggestions-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Sugestões automáticas</p>
+              <h2 id="suggestions-title">Atalhos inteligentes</h2>
+            </div>
+          </div>
+
+          <div class="prompt-list">
+            <button type="button" data-prompt="Monte uma revisão para matemática hoje.">Revisão de matemática</button>
+            <button type="button" data-prompt="Quais matérias devo priorizar esta semana?">Prioridades da semana</button>
+            <button type="button" data-prompt="Me dê uma dica de produtividade para estudar melhor.">Dica de produtividade</button>
+            <button type="button" data-prompt="Como melhorar minha redação para o ENEM?">Redação ENEM</button>
+          </div>
+
+          <div class="recommendation-card">
+            <span class="status-pill">Recomendação</span>
+            <h3>Revisar funções hoje</h3>
+            <p>Seu desempenho em Matemática está abaixo da meta semanal. Reserve 45 minutos para exercícios guiados.</p>
+          </div>
+        </aside>
+
+        <section class="dashboard-card chat-panel" id="chat-ia" aria-labelledby="chat-title">
+          <div class="chat-header">
+            <div>
+              <p class="eyebrow">Chat de IA</p>
+              <h2 id="chat-title">MindFlow Assist</h2>
+            </div>
+            <span class="status-pill">Online</span>
+          </div>
+
+          <div class="chat-messages" data-chat-messages aria-live="polite">
+            <article class="chat-message chat-message--ai">
+              <span>IA</span>
+              <p>Olá, Joana. Posso ajudar a organizar seu estudo de hoje, sugerir revisões ou ajustar suas prioridades.</p>
+            </article>
+            <article class="chat-message chat-message--user">
+              <span>Você</span>
+              <p>Preciso melhorar em matemática sem abandonar redação.</p>
+            </article>
+            <article class="chat-message chat-message--ai">
+              <span>IA</span>
+              <p>Boa estratégia: mantenha redação em 2 blocos semanais e aumente matemática para blocos curtos diários com revisão de erros.</p>
+            </article>
+          </div>
+
+          <form class="chat-form" data-chat-form>
+            <label class="field">
+              <span>Mensagem</span>
+              <textarea rows="3" placeholder="Pergunte sobre revisão, cronograma, produtividade ou ENEM" data-chat-input></textarea>
+            </label>
+            <button class="button button--primary" type="submit">Enviar</button>
+          </form>
+        </section>
+      </section>
+
+      <section class="assistant-insights">
+        <article class="dashboard-card insight-card">
+          <span class="ui-icon ui-icon--form" aria-hidden="true"></span>
+          <h3>Organização dos estudos</h3>
+          <p>Transforme dúvidas em ações: matéria, duração, prioridade e objetivo de cada bloco.</p>
+        </article>
+        <article class="dashboard-card insight-card">
+          <span class="ui-icon ui-icon--cards" aria-hidden="true"></span>
+          <h3>Recomendações de revisão</h3>
+          <p>Identifique conteúdos com menor desempenho e distribua revisões ao longo da semana.</p>
+        </article>
+        <article class="dashboard-card insight-card">
+          <span class="ui-icon ui-icon--type" aria-hidden="true"></span>
+          <h3>Orientação personalizada</h3>
+          <p>Receba respostas alinhadas ao objetivo, rotina disponível e preparação para o ENEM.</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../main.js"></script>
+  </body>
+</html>

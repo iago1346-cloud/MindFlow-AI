@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Planejamento inteligente de estudos no MindFlow AI." />
+    <title>Planejamento | MindFlow AI</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <nav class="navbar" aria-label="Navegação principal">
+        <a class="brand" href="../index.html" aria-label="MindFlow AI - página inicial">
+          <span class="brand__mark">M</span>
+          <span class="brand__text">MindFlow AI</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-menu" data-menu-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-menu" id="primary-menu" data-menu>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="assistente.html">Assistente IA</a></li>
+          <li><a href="desempenho.html">Desempenho</a></li>
+          <li><a href="lembretes.html">Lembretes</a></li>
+          <li><a href="conquistas.html">Conquistas</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="login.html">Sair</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="planner section">
+      <section class="dashboard-hero planner-hero" aria-labelledby="planner-title">
+        <div>
+          <p class="eyebrow">Planejamento inteligente</p>
+          <h1 id="planner-title">Monte, ajuste e acompanhe seu cronograma de estudos.</h1>
+          <p>Organize matérias por prioridade, defina metas semanais e mensais, e mantenha a rotina clara antes de cada sessão.</p>
+        </div>
+        <a class="button button--primary" href="#novo-cronograma">Novo cronograma</a>
+      </section>
+
+      <section class="planner-grid">
+        <form class="dashboard-card planner-form" id="novo-cronograma" aria-labelledby="new-plan-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Criar cronograma</p>
+              <h2 id="new-plan-title">Novo bloco de estudo</h2>
+            </div>
+          </div>
+
+          <label class="field">
+            <span>Matéria</span>
+            <select>
+              <option>Matemática</option>
+              <option>Redação</option>
+              <option>Biologia</option>
+              <option>História</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Dia da semana</span>
+            <select>
+              <option>Segunda-feira</option>
+              <option>Terça-feira</option>
+              <option>Quarta-feira</option>
+              <option>Quinta-feira</option>
+              <option>Sexta-feira</option>
+            </select>
+          </label>
+          <div class="form-pair">
+            <label class="field">
+              <span>Início</span>
+              <input type="time" value="19:30" />
+            </label>
+            <label class="field">
+              <span>Duração</span>
+              <input type="text" value="1h 30min" />
+            </label>
+          </div>
+          <label class="field">
+            <span>Prioridade</span>
+            <select>
+              <option>Alta</option>
+              <option>Média</option>
+              <option>Baixa</option>
+            </select>
+          </label>
+          <label class="field field--full">
+            <span>Objetivo do bloco</span>
+            <textarea rows="4">Revisar teoria, resolver exercícios e marcar dúvidas para a próxima revisão.</textarea>
+          </label>
+          <button class="button button--primary" type="button">Adicionar ao cronograma</button>
+        </form>
+
+        <aside class="dashboard-card planner-summary" aria-labelledby="planner-summary-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Metas</p>
+              <h2 id="planner-summary-title">Semana e mês</h2>
+            </div>
+          </div>
+          <div class="goal-list">
+            <article>
+              <span>Meta semanal</span>
+              <strong>22h de estudo</strong>
+              <div class="progress-track"><span style="width: 68%"></span></div>
+            </article>
+            <article>
+              <span>Meta mensal</span>
+              <strong>86h de estudo</strong>
+              <div class="progress-track"><span style="width: 41%"></span></div>
+            </article>
+          </div>
+        </aside>
+      </section>
+
+      <section class="planner-grid planner-grid--wide">
+        <article class="dashboard-card schedule-manager" aria-labelledby="schedule-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Editar e excluir cronogramas</p>
+              <h2 id="schedule-title">Cronograma ativo</h2>
+            </div>
+          </div>
+
+          <div class="plan-list">
+            <article class="plan-item">
+              <time>Segunda, 19:30</time>
+              <div>
+                <h3>Matemática: funções</h3>
+                <p>Resolver 15 exercícios e revisar gráficos.</p>
+              </div>
+              <span class="priority priority--high">Alta</span>
+              <div class="plan-actions">
+                <button class="button button--ghost" type="button">Editar</button>
+                <button class="button button--danger" type="button">Excluir</button>
+              </div>
+            </article>
+            <article class="plan-item">
+              <time>Quarta, 17:00</time>
+              <div>
+                <h3>Redação: repertório</h3>
+                <p>Montar argumentos para tema social.</p>
+              </div>
+              <span class="priority priority--medium">Média</span>
+              <div class="plan-actions">
+                <button class="button button--ghost" type="button">Editar</button>
+                <button class="button button--danger" type="button">Excluir</button>
+              </div>
+            </article>
+            <article class="plan-item">
+              <time>Sexta, 14:00</time>
+              <div>
+                <h3>Biologia: genética</h3>
+                <p>Revisar conceitos e fazer questões ENEM.</p>
+              </div>
+              <span class="priority priority--low">Baixa</span>
+              <div class="plan-actions">
+                <button class="button button--ghost" type="button">Editar</button>
+                <button class="button button--danger" type="button">Excluir</button>
+              </div>
+            </article>
+          </div>
+        </article>
+
+        <aside class="dashboard-card subject-board" aria-labelledby="subjects-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Matérias</p>
+              <h2 id="subjects-title">Prioridades</h2>
+            </div>
+          </div>
+          <div class="subject-list">
+            <article>
+              <strong>Matemática</strong>
+              <span class="priority priority--high">Alta</span>
+              <p>4 blocos por semana</p>
+            </article>
+            <article>
+              <strong>Redação</strong>
+              <span class="priority priority--medium">Média</span>
+              <p>2 blocos por semana</p>
+            </article>
+            <article>
+              <strong>História</strong>
+              <span class="priority priority--low">Baixa</span>
+              <p>1 bloco por semana</p>
+            </article>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="../main.js"></script>
+  </body>
+</html>
