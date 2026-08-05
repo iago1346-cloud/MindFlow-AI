@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dicas inteligentes do MindFlow AI com recomendações automáticas de estudo e revisão." />
+    <title>Dicas Inteligentes | MindFlow AI</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <nav class="navbar" aria-label="Navegação principal">
+        <a class="brand" href="../index.html" aria-label="MindFlow AI - página inicial">
+          <span class="brand__mark">M</span>
+          <span class="brand__text">MindFlow AI</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-menu" data-menu-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-menu" id="primary-menu" data-menu>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="planejamento.html">Planejamento</a></li>
+          <li><a href="assistente.html">Assistente IA</a></li>
+          <li><a href="desempenho.html">Desempenho</a></li>
+          <li><a href="lembretes.html">Lembretes</a></li>
+          <li><a href="conquistas.html">Conquistas</a></li>
+          <li><a href="enem.html">ENEM</a></li>
+          <li><a href="dicas.html">Dicas</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="login.html">Sair</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="tips-page section">
+      <!-- Hero -->
+      <section class="dashboard-hero tips-hero" aria-labelledby="tips-title">
+        <div>
+          <p class="eyebrow">Dicas inteligentes</p>
+          <h1 id="tips-title">Recomendações automáticas para estudar melhor.</h1>
+          <p>O MindFlow analisa sua rotina e desempenho para sugerir dicas diárias, revisões estratégicas e métodos de estudo personalizados.</p>
+        </div>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#dica-do-dia">Ver dica de hoje</a>
+          <a class="button button--secondary" href="#estrategias">Estratégias de estudo</a>
+        </div>
+      </section>
+
+      <!-- Métricas -->
+      <section class="metric-grid" aria-label="Resumo de recomendações">
+        <article class="dashboard-card metric-tile">
+          <span>Dicas ativas</span>
+          <strong>7</strong>
+          <p>Atualizadas com base na rotina</p>
+        </article>
+        <article class="dashboard-card metric-tile">
+          <span>Revisões sugeridas</span>
+          <strong>3</strong>
+          <p>Para hoje com base no desempenho</p>
+        </article>
+        <article class="dashboard-card metric-tile">
+          <span>Estratégias</span>
+          <strong>12</strong>
+          <p>Métodos testados para foco e constância</p>
+        </article>
+        <article class="dashboard-card metric-tile">
+          <span>Adesão</span>
+          <strong>84%</strong>
+          <p>Você seguiu as últimas sugestões</p>
+        </article>
+      </section>
+
+      <!-- Dica do dia -->
+      <section class="dashboard-card daily-tip" id="dica-do-dia" aria-labelledby="daily-tip-title">
+        <div class="dashboard-card__header">
+          <div>
+            <p class="eyebrow">Dica diária</p>
+            <h2 id="daily-tip-title">Dica de hoje</h2>
+          </div>
+          <span class="status-pill">Atualizada</span>
+        </div>
+        <div class="daily-tip__content">
+          <span class="tip-icon" aria-hidden="true">💡</span>
+          <div>
+            <h3>Revise em blocos curtos para não perder a constância</h3>
+            <p>Em vez de uma sessão longa, faça três blocos de 25 minutos com pausas de 5. Isso reduz a fadiga e aumenta a retenção do conteúdo estudado hoje.</p>
+          </div>
+          <button class="button button--ghost" type="button" data-tips-new>Nova dica</button>
+        </div>
+      </section>
+
+      <!-- Sugestões de revisão -->
+      <section class="dashboard-card review-suggestions" aria-labelledby="review-title">
+        <div class="dashboard-card__header">
+          <div>
+            <p class="eyebrow">Sugestões de revisão</p>
+            <h2 id="review-title">Revisões recomendadas para hoje</h2>
+          </div>
+        </div>
+        <div class="review-suggestion-list">
+          <article class="review-suggestion">
+            <span class="area-badge area-badge--cn">CN</span>
+            <div>
+              <h3>Química orgânica</h3>
+              <p>Desempenho abaixo de 60% no último simulado. Revisão de 30 minutos recomendada.</p>
+            </div>
+            <span class="status-pill">Prioridade</span>
+          </article>
+          <article class="review-suggestion">
+            <span class="area-badge area-badge--mt">MT</span>
+            <div>
+              <h3>Probabilidade e estatística</h3>
+              <p>Erros recorrentes em questões de análise de dados. Refazer 10 questões.</p>
+            </div>
+            <span class="status-pill">Hoje</span>
+          </article>
+          <article class="review-suggestion">
+            <span class="area-badge area-badge--lg">LG</span>
+            <div>
+              <h3>Interpretação de textos longos</h3>
+              <p>Você está evoluindo bem. Revisão leve para manter o ritmo.</p>
+            </div>
+            <span class="status-pill">Opcional</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- Recomendações por desempenho -->
+      <section class="tips-grid">
+        <article class="dashboard-card performance-tips" aria-labelledby="perf-tips-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Baseadas no desempenho</p>
+              <h2 id="perf-tips-title">Recomendações personalizadas</h2>
+            </div>
+          </div>
+          <div class="perf-tip-list">
+            <article class="perf-tip">
+              <span class="perf-tip__icon" aria-hidden="true">↑</span>
+              <div>
+                <h3>Sua melhor área é Linguagens</h3>
+                <p>Continue com 2 blocos semanais. Seu acerto está acima de 80%.</p>
+              </div>
+            </article>
+            <article class="perf-tip">
+              <span class="perf-tip__icon" aria-hidden="true">↓</span>
+              <div>
+                <h3>Natureza precisa de atenção</h3>
+                <p>Aumente de 2 para 3 blocos semanais e priorize Química orgânica.</p>
+              </div>
+            </article>
+            <article class="perf-tip">
+              <span class="perf-tip__icon" aria-hidden="true">→</span>
+              <div>
+                <h3>Matemática está estável</h3>
+                <p>Mantenha o ritmo atual e inclua uma bateria de questões ENEM por semana.</p>
+              </div>
+            </article>
+            <article class="perf-tip">
+              <span class="perf-tip__icon" aria-hidden="true">R</span>
+              <div>
+                <h3>Redação: foco em proposta de intervenção</h3>
+                <p>Seus números em C5 (intervenção) caíram nos últimos dois textos.</p>
+              </div>
+            </article>
+          </div>
+        </article>
+
+        <!-- Estratégias de estudo -->
+        <aside class="dashboard-card study-strategies" id="estrategias" aria-labelledby="strategies-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Estratégias de estudo</p>
+              <h2 id="strategies-title">Métodos para evoluir</h2>
+            </div>
+          </div>
+          <div class="strategy-list">
+            <article class="strategy-card">
+              <span class="strategy-card__num">01</span>
+              <div>
+                <h3>Técnica Pomodoro</h3>
+                <p>Blocos de 25 minutos com pausas curtas para manter o foco.</p>
+              </div>
+            </article>
+            <article class="strategy-card">
+              <span class="strategy-card__num">02</span>
+              <div>
+                <h3>Revisão espaçada</h3>
+                <p>Revise após 1, 3 e 7 dias para fixar o conteúdo no longo prazo.</p>
+              </div>
+            </article>
+            <article class="strategy-card">
+              <span class="strategy-card__num">03</span>
+              <div>
+                <h3>Estudo ativo</h3>
+                <p>Explique o conteúdo em voz alta ou escreva resumos com as próprias palavras.</p>
+              </div>
+            </article>
+            <article class="strategy-card">
+              <span class="strategy-card__num">04</span>
+              <div>
+                <h3>Simulados frequentes</h3>
+                <p>Faça ao menos um simulado por semana para treinar tempo e resistência.</p>
+              </div>
+            </article>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Dicas extras -->
+      <section class="dashboard-card extra-tips" aria-labelledby="extra-tips-title">
+        <div class="dashboard-card__header">
+          <div>
+            <p class="eyebrow">Mais dicas</p>
+            <h2 id="extra-tips-title">Dicas rápidas para a rotina</h2>
+          </div>
+        </div>
+        <div class="extra-tip-grid">
+          <article class="extra-tip">
+            <h3>Dormir bem</h3>
+            <p>7 a 8 horas de sono consolidam a memória e melhoram o raciocínio.</p>
+          </article>
+          <article class="extra-tip">
+            <h3>Hidratar-se</h3>
+            <p>Manter-se hidratado ajuda na concentração durante longas sessões.</p>
+          </article>
+          <article class="extra-tip">
+            <h3>Celular fora</h3>
+            <p>Deixar o celular em outro cômodo reduz distrações em até 30%.</p>
+          </article>
+          <article class="extra-tip">
+            <h3>Revisar erros</h3>
+            <p>Anotar os erros das questões é mais eficaz do que refazer acertos.</p>
+          </article>
+          <article class="extra-tip">
+            <h3>Pausas ativas</h3>
+            <p>Levante e alongue-se a cada bloco para renovar a energia.</p>
+          </article>
+          <article class="extra-tip">
+            <h3>Metas pequenas</h3>
+            <p>Divida grandes objetivos em tarefas diárias alcançáveis.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="../main.js"></script>
+  </body>
+</html>

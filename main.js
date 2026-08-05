@@ -220,3 +220,71 @@ if (enemEssayEditButton) {
     showEnemFeedback(enemEssayEditButton, "Rascunho restaurado. Continue de onde parou.");
   });
 }
+
+/* ============================================================
+   Fase 12 — Dicas Inteligentes
+   ============================================================ */
+
+const tipsNewButton = document.querySelector("[data-tips-new]");
+
+const dailyTips = [
+  {
+    title: "Revise em blocos curtos para não perder a constância",
+    text: "Em vez de uma sessão longa, faça três blocos de 25 minutos com pausas de 5. Isso reduz a fadiga e aumenta a retenção do conteúdo estudado hoje.",
+  },
+  {
+    title: "Priorize as matérias mais fracas no início do dia",
+    text: "A energia da manhã rende mais para o que exige atenção. Reserve 40 minutos para a área com menor desempenho antes dos assuntos fáceis.",
+  },
+  {
+    title: "Transforme erros em um plano de revisão",
+    text: "Ao errar uma questão, anote o tópico e revise-o em 24h. Isso transforma o erro em oportunidade de evolução concreta.",
+  },
+  {
+    title: "Use a técnica de ensino Feynman",
+    text: "Explique o conceito estudado como se estivesse ensinando outra pessoa. Se travar, volte ao material e refaça a explicação.",
+  },
+  {
+    title: "Mantenha a redação aquecida toda semana",
+    text: "Escreva ao menos uma redação por semana e compare as competências C1 e C2 entre textos para notar evolução.",
+  },
+  {
+    title: "Faça uma bateria de questões no cronômetro",
+    text: "Resolver 10 questões em 18 minutos treina velocidade e reduz a ansiedade em condições de prova.",
+  },
+];
+
+let currentTipIndex = 0;
+
+function showTipFeedback(target, message) {
+  if (!target) return;
+
+  const existingFeedback = target.parentElement?.querySelector(".tips-feedback");
+  if (existingFeedback) {
+    existingFeedback.remove();
+  }
+
+  const feedback = document.createElement("p");
+  feedback.className = "tips-feedback";
+  feedback.textContent = message;
+  target.insertAdjacentElement("afterend", feedback);
+}
+
+if (tipsNewButton) {
+  tipsNewButton.addEventListener("click", () => {
+    currentTipIndex = (currentTipIndex + 1) % dailyTips.length;
+    const tip = dailyTips[currentTipIndex];
+
+    const tipTitle = tipsNewButton.closest(".daily-tip__content")?.querySelector("h3");
+    const tipText = tipsNewButton.closest(".daily-tip__content")?.querySelector("p");
+
+    if (tipTitle) {
+      tipTitle.textContent = tip.title;
+    }
+    if (tipText) {
+      tipText.textContent = tip.text;
+    }
+
+    showTipFeedback(tipsNewButton, `Dica ${currentTipIndex + 1} de ${dailyTips.length} carregada.`);
+  });
+}

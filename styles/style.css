@@ -2648,3 +2648,222 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   Fase 12 — Dicas Inteligentes
+   ============================================================ */
+
+.tips-page {
+  display: grid;
+  gap: 22px;
+}
+
+.daily-tip,
+.review-suggestions,
+.performance-tips,
+.study-strategies,
+.extra-tips {
+  padding: 24px;
+}
+
+.daily-tip__content {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-surface-strong);
+}
+
+.tip-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: var(--radius);
+  background: rgba(240, 180, 41, 0.16);
+  font-size: 1.4rem;
+}
+
+.daily-tip__content h3 {
+  margin-bottom: 6px;
+  font-size: 1.05rem;
+}
+
+.daily-tip__content p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.review-suggestion-list {
+  display: grid;
+  gap: 12px;
+}
+
+.review-suggestion {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-surface-strong);
+}
+
+.review-suggestion h3 {
+  margin-bottom: 4px;
+  font-size: 0.96rem;
+}
+
+.review-suggestion p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.84rem;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  gap: 18px;
+}
+
+.perf-tip-list {
+  display: grid;
+  gap: 12px;
+}
+
+.perf-tip {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-surface-strong);
+}
+
+.perf-tip__icon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: var(--radius);
+  background: rgba(32, 87, 214, 0.12);
+  color: var(--color-primary-dark);
+  font-weight: 900;
+}
+
+.perf-tip h3 {
+  margin-bottom: 4px;
+  font-size: 0.94rem;
+}
+
+.perf-tip p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.84rem;
+}
+
+.strategy-list {
+  display: grid;
+  gap: 12px;
+}
+
+.strategy-card {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-surface-strong);
+}
+
+.strategy-card__num {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: var(--radius);
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 900;
+  font-size: 0.86rem;
+}
+
+.strategy-card h3 {
+  margin-bottom: 4px;
+  font-size: 0.94rem;
+}
+
+.strategy-card p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.84rem;
+}
+
+.extra-tip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.extra-tip {
+  padding: 16px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-surface-strong);
+}
+
+.extra-tip h3 {
+  margin-bottom: 6px;
+  font-size: 0.96rem;
+}
+
+.extra-tip p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.84rem;
+}
+
+.tips-feedback {
+  margin-top: 14px;
+  padding: 12px;
+  border: 1px solid rgba(23, 169, 132, 0.22);
+  border-radius: var(--radius);
+  background: rgba(23, 169, 132, 0.1);
+  color: #08745a;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 860px) {
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .daily-tip__content {
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+
+  .daily-tip__content .button {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 520px) {
+  .extra-tip-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-suggestion,
+  .perf-tip,
+  .strategy-card {
+    grid-template-columns: 1fr;
+  }
+}
