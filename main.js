@@ -1,4 +1,4 @@
-const menuToggle = document.querySelector("[data-menu-toggle]");
+const menuToggle = document.querySelector("[data-menu-toggle]");ynnnnnnnnnnnnnnnnnnnnnnnnnnnn66666666f5 
 const menu = document.querySelector("[data-menu]");
 const header = document.querySelector("[data-header]");
 const modal = document.querySelector("[data-modal]");
@@ -413,3 +413,52 @@ if (motivationNewButton) {
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+/* ============================================================
+   Fase 14 — Página de Contato
+   ============================================================ */
+
+const contactSendButton = document.querySelector("[data-contact-send]");
+
+function showContactFeedback(target, message, isError = false) {
+  if (!target) return;
+
+  const existingFeedback = target.parentElement?.querySelector(".contact-feedback");
+  if (existingFeedback) {
+    existingFeedback.remove();
+  }
+
+  const feedback = document.createElement("p");
+  feedback.className = isError ? "contact-feedback contact-feedback--error" : "contact-feedback";
+  feedback.textContent = message;
+  target.insertAdjacentElement("afterend", feedback);
+}
+
+if (contactSendButton) {
+  contactSendButton.addEventListener("click", () => {
+    const form = contactSendButton.closest("form");
+    const nameInput = form?.querySelector('input[type="text"]');
+    const emailInput = form?.querySelector('input[type="email"]');
+    const messageTextarea = form?.querySelector("textarea");
+
+    const name = nameInput?.value?.trim() || "";
+    const email = emailInput?.value?.trim() || "";
+    const message = messageTextarea?.value?.trim() || "";
+
+    if (!name || !email || !message) {
+      showContactFeedback(contactSendButton, "Preencha todos os campos antes de enviar.", true);
+      return;
+    }
+
+    if (!email.includes("@") || !email.includes(".")) {
+      showContactFeedback(contactSendButton, "Informe um e-mail válido.", true);
+      return;
+    }
+
+    showContactFeedback(contactSendButton, "Mensagem enviada com sucesso! Nossa equipe responderá em até 24 horas úteis.");
+
+    if (nameInput) nameInput.value = "";
+    if (emailInput) emailInput.value = "";
+    if (messageTextarea) messageTextarea.value = "";
+  });
+}

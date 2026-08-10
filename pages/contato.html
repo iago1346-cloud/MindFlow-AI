@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Página de contato do MindFlow AI com formulário, FAQ e informações de suporte." />
+    <title>Contato | MindFlow AI</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <nav class="navbar" aria-label="Navegação principal">
+        <a class="brand" href="../index.html" aria-label="MindFlow AI - página inicial">
+          <span class="brand__mark">M</span>
+          <span class="brand__text">MindFlow AI</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-menu" data-menu-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-menu" id="primary-menu" data-menu>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="planejamento.html">Planejamento</a></li>
+          <li><a href="assistente.html">Assistente IA</a></li>
+          <li><a href="desempenho.html">Desempenho</a></li>
+          <li><a href="lembretes.html">Lembretes</a></li>
+          <li><a href="conquistas.html">Conquistas</a></li>
+          <li><a href="enem.html">ENEM</a></li>
+          <li><a href="dicas.html">Dicas</a></li>
+          <li><a href="contador.html">Contador</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="login.html">Sair</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="contact-page section">
+      <!-- Hero -->
+      <section class="dashboard-hero contact-hero" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Fale conosco</p>
+          <h1 id="contact-title">Estamos aqui para ajudar você a estudar melhor.</h1>
+          <p>Envie sua mensagem, tire dúvidas ou compartilhe sugestões. Nossa equipe responde em até 24 horas úteis.</p>
+        </div>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#formulario">Enviar mensagem</a>
+          <a class="button button--secondary" href="#faq">Ver FAQ</a>
+        </div>
+      </section>
+
+      <!-- Formulário de contato -->
+      <section class="contact-grid" id="formulario">
+        <form class="dashboard-card contact-form" aria-labelledby="form-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Formulário de contato</p>
+              <h2 id="form-title">Envie sua mensagem</h2>
+            </div>
+          </div>
+
+          <label class="field">
+            <span>Nome</span>
+            <input type="text" placeholder="Seu nome completo" />
+          </label>
+          <label class="field">
+            <span>E-mail</span>
+            <input type="email" placeholder="seuemail@exemplo.com" />
+          </label>
+          <label class="field">
+            <span>Assunto</span>
+            <select>
+              <option>Dúvida sobre a plataforma</option>
+              <option>Sugestão de melhoria</option>
+              <option>Problema técnico</option>
+              <option>Parcerias</option>
+              <option>Outro assunto</option>
+            </select>
+          </label>
+          <label class="field field--full">
+            <span>Mensagem</span>
+            <textarea rows="6" placeholder="Descreva sua dúvida ou mensagem em detalhes..."></textarea>
+          </label>
+          <button class="button button--primary" type="button" data-contact-send>Enviar mensagem</button>
+        </form>
+
+        <aside class="dashboard-card support-info" aria-labelledby="support-title">
+          <div class="dashboard-card__header">
+            <div>
+              <p class="eyebrow">Informações de suporte</p>
+              <h2 id="support-title">Canais de atendimento</h2>
+            </div>
+          </div>
+          <div class="support-list">
+            <article class="support-item">
+              <span class="support-item__icon" aria-hidden="true">✉</span>
+              <div>
+                <h3>E-mail</h3>
+                <p>suporte@mindflowai.com.br</p>
+              </div>
+            </article>
+            <article class="support-item">
+              <span class="support-item__icon" aria-hidden="true">💬</span>
+              <div>
+                <h3>Chat ao vivo</h3>
+                <p>Disponível de segunda a sexta, das 8h às 18h</p>
+              </div>
+            </article>
+            <article class="support-item">
+              <span class="support-item__icon" aria-hidden="true">📱</span>
+              <div>
+                <h3>WhatsApp</h3>
+                <p>(11) 99999-0000</p>
+              </div>
+            </article>
+            <article class="support-item">
+              <span class="support-item__icon" aria-hidden="true">🌐</span>
+              <div>
+                <h3>Redes sociais</h3>
+                <p>@mindflowai no Instagram, TikTok e YouTube</p>
+              </div>
+            </article>
+          </div>
+          <div class="support-hours">
+            <h3>Horário de atendimento</h3>
+            <p>Segunda a sexta: 8h às 18h</p>
+            <p>Sábado: 9h às 13h</p>
+            <p>Domingo e feriados: plantão via e-mail</p>
+          </div>
+        </aside>
+      </section>
+
+      <!-- FAQ -->
+      <section class="dashboard-card faq-section" id="faq" aria-labelledby="faq-title">
+        <div class="dashboard-card__header">
+          <div>
+            <p class="eyebrow">Perguntas frequentes</p>
+            <h2 id="faq-title">FAQ — Dúvidas comuns</h2>
+          </div>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Como funciona o plano de estudos do MindFlow AI?</summary>
+            <p>O MindFlow organiza suas matérias, prioridades e disponibilidade semanal em um cronograma visual. Você define metas e o sistema sugere blocos de estudo equilibrados.</p>
+          </details>
+          <details class="faq-item">
+            <summary>O MindFlow AI é gratuito?</summary>
+            <p>Sim! A versão atual é gratuita e inclui todas as funcionalidades: planejamento, assistente de IA, desempenho, lembretes, conquistas, preparatório ENEM e dicas inteligentes.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Como o assistente de IA me ajuda nos estudos?</summary>
+            <p>O assistente analisa sua rotina e responde perguntas sobre organização, revisão, produtividade e estratégias de estudo, oferecendo recomendações personalizadas.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Posso usar o MindFlow no celular?</summary>
+            <p>Sim! A plataforma é totalmente responsiva e funciona em smartphones, tablets, notebooks e desktops.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Como são calculadas as conquistas e o XP?</summary>
+            <p>Você ganha XP ao concluir metas, manter a sequência de estudos, resolver questões e entregar redações. As medalhas são desbloqueadas ao atingir marcos específicos.</p>
+          </details>
+          <details class="faq-item">
+            <summary>O preparatório ENEM inclui correção de redação?</summary>
+            <p>Sim! A área de redação oferece correção automática com análise das 5 competências do ENEM e feedback detalhado para evolução.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <script src="../main.js"></script>
+  </body>
+</html>
