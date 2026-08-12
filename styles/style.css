@@ -29,10 +29,12 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
+  overflow-x: hidden;
   will-change: scroll-position;
   background: var(--color-bg);
   color: var(--color-text);
@@ -3440,4 +3442,421 @@ textarea:focus {
   .support-item {
     grid-template-columns: 1fr;
   }
+}
+
+/* ============================================================
+   Fase 15 — Responsividade (Melhorias Adicionais)
+   ============================================================ */
+
+/* Extra small phones (< 375px) */
+@media (max-width: 360px) {
+  html {
+    font-size: 14px;
+  }
+
+  .navbar {
+    min-height: 60px;
+  }
+
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+
+  .brand {
+    font-size: 1rem;
+  }
+
+  .button {
+    min-height: 44px;
+    padding: 0 16px;
+    font-size: 0.9rem;
+  }
+
+  .study-panel,
+  .metric-card,
+  .progress-card,
+  .feature-card,
+  .step-card,
+  .ui-panel,
+  .auth-card,
+  .dashboard-card {
+    padding: 16px !important;
+  }
+
+  .hero__actions {
+    gap: 8px;
+  }
+
+  .hero__stats span {
+    padding: 12px 16px;
+  }
+
+  .schedule-list article {
+    grid-template-columns: 60px 1fr;
+    gap: 12px;
+  }
+}
+
+/* Mobile phones (360px - 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    gap: 12px;
+    min-height: 64px;
+  }
+
+  .brand {
+    font-size: 1.025rem;
+  }
+
+  .section,
+  .navbar,
+  .site-footer {
+    width: min(100% - 16px, var(--container));
+    padding: 0 8px;
+  }
+
+  .hero {
+    padding: 48px 0 36px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero__stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .hero__actions {
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .button {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .study-panel {
+    padding: 16px;
+    margin: 16px 0;
+  }
+
+  .schedule-list {
+    gap: 10px;
+  }
+
+  .schedule-list article {
+    gap: 12px;
+    padding: 12px 16px;
+  }
+
+  .benefit-grid,
+  .steps,
+  .feature-grid {
+    gap: 14px;
+  }
+
+  .benefit-item,
+  .step-card,
+  .feature-card {
+    padding: 16px;
+  }
+
+  .modal__content {
+    padding: 20px;
+  }
+
+  .countdown-display {
+    gap: 8px;
+  }
+
+  .countdown-unit {
+    padding: 12px 8px;
+  }
+
+  .countdown-unit strong {
+    font-size: 1.8rem;
+  }
+}
+
+/* Tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .section {
+    padding: 48px 0;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 1.9rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefit-grid,
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .metric-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .enem-band,
+  .signup-cta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  .enem-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .area-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .correction-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .extra-tip-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sample-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Large tablets & small desktops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .section {
+    padding: 52px 0;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.1rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .metric-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .performance-grid,
+  .planner-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .assistant-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .reminders-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .area-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .extra-tip-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktops (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .section {
+    padding: 64px 0;
+  }
+
+  h1 {
+    font-size: 3.3rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .metric-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .area-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .correction-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .extra-tip-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Large desktops (> 1440px) */
+@media (min-width: 1441px) {
+  .section {
+    padding: 72px 0;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .extra-tip-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Print styles (responsivo para impressão) */
+@media print {
+  .nav-toggle,
+  .site-header,
+  .site-footer,
+  .button,
+  .modal {
+    display: none;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  .section {
+    padding: 20px 0;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+/* High DPI displays (retina, etc) */
+@media (min-device-pixel-ratio: 2),
+       (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+  /* Optimize for high DPI screens */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Landscape orientation on tablets/phones */
+@media (max-height: 500px) and (max-width: 900px) {
+  .navbar {
+    min-height: 56px;
+  }
+
+  .section {
+    padding: 32px 0;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero {
+    padding-top: 40px;
+    padding-bottom: 32px;
+  }
+}
+
+/* Hover states (only on devices that support hover) */
+@media (hover: hover) {
+  .button:hover {
+    transform: translateY(-2px);
+  }
+
+  .benefit-item:hover,
+  .step-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* Touch devices (no hover) */
+@media (hover: none) {
+  .button,
+  .benefit-item,
+  .step-card,
+  .card {
+    transition: none;
+  }
+
+  .button:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Dark mode support (if user prefers dark mode) */
+@media (prefers-color-scheme: dark) {
+  /* Note: This is a placeholder. Full dark mode would require CSS variables adjustment */
+  /* Currently using light theme throughout */
 }
