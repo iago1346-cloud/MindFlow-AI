@@ -1,4 +1,4 @@
-const menuToggle = document.querySelector("[data-menu-toggle]");ynnnnnnnnnnnnnnnnnnnnnnnnnnnn66666666f5 
+const menuToggle = document.querySelector("[data-menu-toggle]");
 const menu = document.querySelector("[data-menu]");
 const header = document.querySelector("[data-header]");
 const modal = document.querySelector("[data-modal]");
